@@ -1,23 +1,17 @@
 
 # Efficient Operating System Scheduler Design for Serverless (FaaS) Workloads  
-Custom User-Level Scheduler for OpenFaaS using Azure Functions Trace 2019
+Custom Scheduler for OpenFaaS using Azure Functions Trace 2019
 
 ---
 
 ## Overview
 
 This repository contains the implementation of a **user-level custom scheduler** designed to improve performance in serverless Function-as-a-Service (FaaS) environments.  
-The scheduler operates at the **gateway/request-dispatch level**, without modifying the Linux kernel, and aims to:
+The scheduler operates at the **gateway/request level**, without modifying the Linux kernel, and aims to:
 
 - Reduce excessive Context Switching inside function containers  
-- Improve tail latency stability (p95/p99) under bursty serverless workloads  
 - Prevent slow/straggler functions from degrading system-wide performance  
 - Provide consistent scheduling efficiency across highly irregular workloads
-
-This work is based on the research conducted for my undergraduate thesis:
-
-“Serverless(FaaS)환경에서 효율적인 운영체제 스케줄러 개발에 대한 연구”  
-(Efficient Operating System Scheduler Design for Serverless (FaaS) Workloads)**
 
 ---
 
