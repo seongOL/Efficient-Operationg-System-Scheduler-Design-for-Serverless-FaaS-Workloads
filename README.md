@@ -6,8 +6,8 @@ Custom Scheduler for OpenFaaS using Azure Functions Trace 2019
 
 ## Overview
 
-This repository contains the implementation of a **user-level custom scheduler** designed to improve performance in serverless Function-as-a-Service (FaaS) environments.  
-The scheduler operates at the **gateway/request level**, without modifying the Linux kernel, and aims to:
+This repository contains the implementation of a custom scheduler designed to improve performance in serverless Function-as-a-Service (FaaS) environments.  
+The scheduler operates at the gateway/request level, without modifying the Linux kernel, and aims to:
 
 - Reduce excessive Context Switching inside function containers  
 - Prevent slow/straggler functions from degrading system-wide performance  
