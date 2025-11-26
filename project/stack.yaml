@@ -1,0 +1,339 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  func-00:
+    lang: python3-http
+    handler: ./dummy-func
+    image: sungolee/dummy-func:v8
+    build_args:
+      ADDITIONAL_PACKAGE: "util-linux"
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-01:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-02:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-03:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-04:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-05:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-06:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-07:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-08:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-09:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-10:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-11:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-12:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-13:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
+  func-14:
+    image: sungolee/dummy-func:v8
+    skip_build: true
+    environment:
+      fprocess: "python index.py"
+      MODE: "cpu"
+      SCALE_MS: "3"
+      BASE_DELAY_MS: "0"
+      JITTER_MS: "0"
+      SCHED_MODE: "CFS"
+    annotations:
+      com.openfaas.scale.min: "1"
+      com.openfaas.scale.max: "1"
+    securityContext:
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add: ["SYS_NICE"]
+      seccompProfile:
+        type: Unconfined
+
